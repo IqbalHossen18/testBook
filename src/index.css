@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#userC{
+  background-color: #34495E;
+}
+#namebox{
+  height:40px;
+  width:100%; 
+  border:2px dotted greenyellow;
+  color:greenyellow;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+#homepage{
+  /* height:100vh; */
+  margin-top:2px;
+  background-color: #34495E;
+  color:#AEB6BF;
+  padding:25px;
+  height: 100vh;
+  margin-bottom:5px;
+  position: relative;
+}
+.jumbotron h1{
+  /* font-size:100px; */
+  font-weight:bold;
+}
+.fa-brands{
+  font-size:25px;
+  color:antiquewhite;
+}
+.alignitem{
+  position: absolute;
+  bottom:0;
+}
+#gridabout{
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+}
+@media screen and (max-width: 1265px) {
+  #gridabout{
+    flex-direction:column-reverse;
+  }
+}
