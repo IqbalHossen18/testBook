@@ -4,13 +4,17 @@ import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.m
 import noteContext from '../Context/notes/NoteContext';
 export const Navbar = () => {
     const context = useContext(noteContext);
-    const { showalert } = context;
+    const { showalert , userinfo } = context;
     const history = useHistory();
     const location = useLocation()
     const handleLogout = () => {
         localStorage.removeItem('token')
         showalert('success', 'Logged Out Successfully')
         history.push('/login')
+    }
+
+    const fetchuser = ()=>{
+        userinfo()
     }
     return (
         <>
@@ -33,7 +37,7 @@ export const Navbar = () => {
                             <Link className="btn btn-info mx-1 " to="/login" role="button">Login</Link>
                             <Link className="btn btn-info mx-1 " to="/signup" role="button">Signup</Link>
                         </form> : <form><button onClick={handleLogout} className='btn btn-info mx-1 '>Logout</button>
-                        <Link className="btn btn-info mx-1 " to="/user" role="button">UserInfo</Link></form>}
+                        <Link onClick={fetchuser} className="btn btn-info mx-1 " to="/user" role="button">UserInfo</Link></form>}
                     </div>
                 </div>
             </nav>

@@ -14,17 +14,24 @@ code {
 
 #userC{
   background-color: #34495E;
+  box-shadow:10px 10px 50px #727c87;;
 }
 #namebox{
-  height:40px;
+  height:45px;
   width:100%; 
-  border:2px dotted greenyellow;
-  color:greenyellow;
+  border:2px dotted rgb(221, 255, 0);
+  color:rgb(221, 255, 0);
   display:flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+  font-size:25px;
+  padding:30px;
 }
-
+#spantag{
+  font-weight:bold;
+  color:rgb(215, 255, 225);
+}
 
 
 

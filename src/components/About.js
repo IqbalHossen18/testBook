@@ -1,10 +1,32 @@
 import React from "react";
 // import noteContext from '../Context/notes/NoteContext'
+// import alarmsound from '../sound/alarmsound.mp3'
 export const About = () => {
-  // const a = useContext(noteContext);
-  // useEffect(() => {
-  //   a.update();
-  //   }, [])
+  // const [selectedTime, setSelectedTime] = useState("");
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   const dateTime = e.target['meeting-datetime'].value;
+    
+  //   const now = new Date();
+  //   const selectedDateTime = new Date(dateTime);
+
+  //   const timeDifference = selectedDateTime - now;
+
+
+  //   if (timeDifference > 0) {
+  //     setTimeout(playSound, timeDifference);
+  //   } else {
+  //     console.log('Please set a future time');
+  //   }
+  //   const difference = timeDifference/60000;
+  //   const ceildiffrence = Math.ceil(difference)
+  //   setSelectedTime(ceildiffrence);
+  // };
+
+  // const playSound = () => {
+  //   const sound = new Audio(alarmsound)
+  //   sound.play()
+  // };
 
   return (
     <>
@@ -88,6 +110,13 @@ export const About = () => {
          
           </div>
       </div>
+            {/* <form id="alarm-form" onSubmit={handleFormSubmit}>
+        <label htmlFor="meeting-datetime">Set alarm date and time:</label>
+        <input type="datetime-local" id="meeting-datetime" name="meeting-datetime" />
+        <input className="mx-3" type="submit" value="Submit" />
+      </form>
+      <p id="output">You set an alarm after: {selectedTime} Munites </p> */}
+      
     </>
 
   );

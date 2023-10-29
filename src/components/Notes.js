@@ -5,7 +5,7 @@ import { useContext, useEffect } from 'react'
 import noteContext from '../Context/notes/NoteContext'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
-export const Notes = (props) => {
+export const Notes = () => {
   const context = useContext(noteContext)
   const { notes, allnotes, editnote , showalert} = context;
   let history = useHistory()

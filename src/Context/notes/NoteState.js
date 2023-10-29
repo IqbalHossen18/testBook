@@ -106,11 +106,27 @@ export const NoteState = (props) => {
         }
     }
 
+    const [user, setuser] = useState([])
+    const userinfo = async()=>{
+        try{
+            const response = await fetch('http://localhost:5000/api/auth/getuser', {
+                method:'POST',
+                headers:{
+                    'Content-Type': 'application/json',
+                    'auth-token': localStorage.getItem('token')
+                }
+            })
+            const json = await response.json()
+            setuser(json)
+        }catch(error){
+            console.log(error.message)
+        }
+    }
 
 
     return (
         <>
-            <noteContext.Provider value={{notes, allnotes, addnote, deletenote, editnote, showalert , alert}}>
+            <noteContext.Provider value={{notes, allnotes, addnote, deletenote, editnote, showalert , alert, userinfo, user}}>
                 {props.children}
             </noteContext.Provider>
         </>
